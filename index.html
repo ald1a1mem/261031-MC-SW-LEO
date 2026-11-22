@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>261031 Show！音樂中心 MC 相沅 LEO & 沅禧</title>
+
+<!-- 💡 修正：補上 id="custom-favicon" -->
+<link id="custom-favicon" rel="icon" type="image/png" href="https://github.com/ald1a1mem.png">
+
+<script>
+// =========================================================================
+// ✨【大平台設定區】以後換新影片，只需要修改這裡！ ✨
+// =========================================================================
+
+// 1. YouTube 影片 ID（請填入網址 watch?v= 後面那一串 11 位數英文數字）
+const videoId = "_wyz_0YJaB0"; 
+
+// 2. 🐱 你的 GitHub 帳號名稱（User Name）
+const githubUsername = "ald1a1mem"; 
+
+// 3. 右側時間軸捷徑（顯示名稱、要跳轉的時間秒數）
+const timeLinks = [
+];
+
+// 4. 影片字幕設定（如不需滾動字幕，保持空陣列 [] 即可）
+const subtitles = [
+  { time: 1,text: "MC：大家好 " },
+  { time: 2,text: "相沅：Show！音樂中心 MC 相沅" },
+  { time: 4,text: "LEO：以及今天特別MC ALPHA DRIVE ONE LEO" },
+  { time: 7,text: "沅禧：ILLIT 沅禧" },
+  { time: 8,endTime: 9, text: "沅禧：很高興見到大家" },
+  { time: 11,text: "相沅：各位黑衣特務 今天發生在音樂中心的事 大家應該都知道吧" },
+  { time: 16,text: "LEO：你是說有不明生命體出現在音中市區的事件嗎" },
+  { time: 20,text: "沅禧：據說現在正躲在這裡的某個地方 這可是史無前例的事件" },
+  { time: 24,text: "相沅：既然如此我們今天的任務只有一個" },
+  { time: 26,text: "LEO：抓住並逮捕偷走 K-POP 粉絲心的嫌疑犯" },
+  { time: 30,endTime: 33,text: "沅禧：You're Under Arrest 請下音樂" },
+  { time: 58,text: "相沅：那我們馬上開始簡報吧" },
+  { time: 60,text: "LEO：事件的線索就在今天的演出陣容裡" },
+  { time: 63,text: "LEO：首先請大家關注以獨一無二表演迷倒眾人的 ATEEZ" },
+  { time: 66,text: "沅禧：解除粉絲心防的 RIIZE" },
+  { time: 70,text: "相沅：無限提供心動的案件有力嫌疑人 AND2BLE" },
+  { time: 73,text: "LEO：瞄準全球粉絲心的 ALPHA DRIVE ONE" },
+  { time: 77,text: "沅禧：噓 以及存在本身就是一級機密的 ILLIT 也是強有力的嫌疑人候選" },
+  { time: 83,text: "相沅：還有讓人無法自拔的 NCT WISH" },
+  { time: 87,text: "LEO：完美變身為女英雄的 IVE" },
+  { time: 92,text: "沅禧：以及大家渴望已久的 NMIXX" },
+  { time: 95,text: "相沅：究竟這之中偷走 K-POP 粉絲心的犯人是誰 請大家鎖定到最後" },
+  { time: 102,endTime: 111,text: "MC：在此之前請先來看爭奪 10 月最後一週音樂中心M Chart本週一位候補的三支隊伍" },
+  { time: 115,endTime: 116,text: "LEO：IVE" },
+  { time: 118,endTime: 120,text: "LEO：A2O LITE" },
+  { time: 121,endTime: 122,text: "LEO：NMIXX" },
+  { time: 126,text: "沅禧：決定ㄧ位的方式如下 簡訊請發送至#0505" },
+  { time: 131,text: "沅禧：寫下您支持的團體名稱或專屬編號即可" },
+  { time: 135,text: "沅禧：簡訊每則將收取100韓元費用" },
+  { time: 138,text: "相沅：直播投票請下載畫面下方指定的APP" },
+  { time: 142,text: "相沅：為您支持的候補投下一票" },
+  { time: 144,text: "LEO：今天也請大家踴躍參與投票" },
+  { time: 147,text: "LEO：那麼現在正式開啟直播投票" },
+  { time: 149,endTime: 152,text: "MC：直播投票現在開始" },
+  { time: 155,text: "沅禧：來看看向粉絲發出預告信的三組隊伍" },
+  { time: 157,text: "沅禧：以充滿霸氣的氣勢留下強烈印象的 YUHZ" },
+  { time: 160,text: "相沅：以充滿霸氣的氣勢留下強烈印象的 B THE HOOD" },
+  { time: 163,text: "LEO：以及正在寫下逆襲奇蹟的 BESTie" },
+  { time: 167,endTime: 169,text: "MC：請出場" },
+  { time: 170,text: "沅禧：各位特務" },
+  { time: 171,text: "沅禧：目前的搜查進度如何" },
+  { time: 173,text: "相沅：該怎麼辦呢 線報比想像中還要少" },
+  { time: 175,text: "LEO：難道要進行自由搜查了嗎" },
+  { time: 178,text: "沅禧：那我們先從盡量表現平凡不引人注目的練習開始吧" },
+  { time: 182,endTime: 184,text: "沅禧：1、2" },
+  { time: 185,text: "沅禧：不是 這也太顯眼了吧" },
+  { time: 187,text: "相沅：我剛剛覺得自己很普通啊" },
+  { time: 189,text: "沅禧：完全沒有 那再試一次普通一點的" },
+  { time: 192,endTime: 194,text: "沅禧：1、2" },
+  { time: 195,text: "沅禧：看來要表現得很普通有點困難呢" },
+  { time: 199,text: "LEO：我已經做得很普通了說" },
+  { time: 201,text: "沅禧：這樣的話潛伏搜查就沒有意義了" },
+  { time: 203,text: "相沅：不是 這個叫做帥氣的東西並不是想藏就能藏得住的 對不起" },
+  { time: 209,text: "LEO：好 那我們繼續去尋找隱藏的犯人吧" },
+  { time: 213,text: "沅禧：OK 再次直接出動前往現場 出動" },
+  { time: 217,text: "相沅：讓心動爆發的 FLARE U" },
+  { time: 219,text: "相沅：無故闖入心臟的 BE BOYS" },
+  { time: 221,text: "LEO：以及用多彩魅力武裝的 cosmosy 我們會徹底調查並逮捕你們" },
+  { time: 226,endTime: 228,text: "MC：請出場" },
+  { time: 230,text: "LEO：兩位 緊急狀況" },
+  { time: 233,text: "沅禧：怎麼了" },
+  { time: 234,text: "LEO：剛剛接獲了失蹤報案" },
+  { time: 235,text: "相沅：搜查還在進行中 又有新的失蹤案" },
+  { time: 238,text: "沅禧：是誰 在何時何地失蹤了" },
+  { time: 240,text: "LEO：聽說沅禧的臉頰肉失蹤了" },
+  { time: 244,text: "LEO：這是怎麼回事" },
+  { time: 245,endTime: 248,text: "沅禧：臉頰肉去哪了 飛走了嗎 被我弄不見了" },
+  { time: 249,text: "相沅：沅禧請積極配合搜查" },
+  { time: 253,text: "LEO：那我們現在立刻去找回消失的臉頰肉吧" },
+  { time: 255,endTime: 256,text: "LEO：請下音樂" },
+  { time: 277,text: "沅禧：原本以為消失的沅禧臉頰肉 還剩下一點點 一點點 平安無事" },
+  { time: 281,text: "相沅：這樣案件就算結案了嗎" },
+  { time: 283,text: "相沅：大家可以放心 我們繼續進行下一項搜查" },
+  { time: 286,text: "LEO：光靠登場就能改變現場空氣的 XLOV" },
+  { time: 289,text: "沅禧：無限提供心動的案件有力嫌疑人 AND2BLE" },
+  { time: 293,text: "相沅：以及用嗓音融化所有人心的劉彩勳舞台 大家請集中精神" },
+  { time: 297,endTime: 299,text: "MC：三隊請出場" },
+  { time: 301,text: "沅禧：結束派遣任務歸來的最精銳黑衣特務 現在陪在我們身邊的是 ILLIT"},
+  { time: 305,endTime: 306,text: "沅禧：歡迎你們" },
+  { time: 307,text: "玧我：2、3"},
+  { time: 308,endTime: 310,text: "ILLIT：大家好 我們是 ILLIT"},
+  { time: 312,text: "LEO：終於全員到齊了"},
+  { time: 314,text: "LEO：首先請向粉絲們打聲招呼吧"},
+  { time: 316,endTime: 322,text: "慜柱：首先能夠帶著迷你五輯回歸真的非常開心 我們會趕快逮捕GLLIT們的心"},
+  { time: 323,text: "彩羽：而且這次的歌曲裡表現了很多煩躁的情緒"},
+  { time: 326,text: "彩羽：接下來的活動也會展現很多帥氣的樣子"},
+  { time: 331,text: "相沅：這次你們負責的作戰代號是什麼呢"},
+  { time: 334,text: "玧我：作戰代號 체포하겠어 是一首向用習慣性親切讓人誤會的對象發出霸氣警告 決定親自結束這段關係的歌曲"},
+  { time: 346,endTime: 351,text: "LEO：讀了作戰執行結果報告後 發現出現了一樣非常特別的武器呢"},
+  { time: 352,text: "沅禧：這支哨子就是我們的特級武器"},
+  { time: 355,text: "沅禧：要不要在這裡示範一次給大家看呢"},
+  { time: 357,text: "LEO：太好了 我們也想學學看 可以嗎"},
+  { time: 360,endTime: 364,text: "沅禧：當然可以 請大家看仔細並跟著做 Music Cue"},
+  { time: 385,text: "相沅：除了這種武器之外 你們擁有的特別才能也很驚人吧"},
+  { time: 390,text: "LEO：那麼能讓對方變得無力的專屬特別才能是什麼 現在立刻自首吧"},
+  { time: 396,endTime: 406,text: "玧我：從我先自首 我是隊內唯一的E人 現在開始要把大家的魂魄全部勾走"},
+  { time: 408,text: "玧我：請開始"},
+  { time: 409,endTime: 410,text: "相沅：開始\n沅禧：開始"},
+];
+
+// =========================================================================
+</script>
+
+<style>
+/* 🎨 全域基礎樣式（深色背景） */
+body { 
+  background: #111; 
+  color: white; 
+  text-align: center; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+  margin: 0; 
+  overflow-x: hidden; 
+}
+
+/* 🌟 主題顏色設定（亮藍色風格） */
+:root { 
+  --main-color: #5698c3; 
+}
+
+/* 🔝 標題與字幕控制區 */
+#title { 
+  font-size: 28px; 
+  margin: 20px auto 15px auto; 
+  font-weight: bold; 
+  line-height: 1.5; 
+  max-width: 95%; 
+}
+
+#subtitle-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* 🎬 核心外層大框框：寬度限制為影片寬度，使其完美居中 */
+#main-layout {
+  position: relative;
+  max-width: 640px; 
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#video-wrapper { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%; 
+}
+
+/* 🎥 影片容器 */
+#video-container { 
+  position: relative; 
+  width: 100%; 
+  aspect-ratio: 16 / 9; 
+  background: black; 
+  border-radius: 10px; 
+  overflow: hidden; 
+}
+#player, #player iframe { 
+  width: 100%; 
+  height: 100%; 
+  display: block; 
+}
+
+/* 💬 浮動字幕樣式 */
+#subtitle { 
+  position: absolute; 
+  bottom: 12%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  font-size: 24px; 
+  color: white; 
+  background: rgba(0,0,0,0.65); 
+  padding: 8px 20px; 
+  border-radius: 8px; 
+  white-space: pre-line; 
+  max-width: 70%; 
+  width: fit-content; 
+  pointer-events: none; 
+  z-index: 10; 
+  line-height: 1.4; 
+  display: none;
+  transition: font-size 0.2s ease;
+}
+
+/* 🎯 底部控制列（影片下方只留下全螢幕按鈕） */
+#bottom-block { 
+  width: 100%; 
+  margin-top: 20px; 
+  margin-bottom: 35px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+/* 按鈕通用樣式 */
+.btn {
+  background: var(--main-color); 
+  color: white; 
+  border: none; 
+  padding: 8px 22px; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  font-weight: bold; 
+  transition: 0.3s; 
+  font-size: 15px;
+}
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+/* 主按鈕（全螢幕）加寬加厚 */
+#fullscreenBtn { 
+  padding: 10px 35px;
+  font-size: 16px;
+}
+
+/* 🚪 進入全螢幕後在畫面右下方顯示的「退出全螢幕」按鈕（主色調） */
+#exitFullscreenBtn {
+  display: none; 
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 20; 
+  background: var(--main-color); 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+#exitFullscreenBtn:hover {
+  filter: brightness(1.1);
+}
+/* 當偵測到全螢幕狀態時，自動強制顯示該按鈕 */
+#video-container:fullscreen #exitFullscreenBtn,
+#video-container:-webkit-full-screen #exitFullscreenBtn {
+  display: block !important;
+}
+
+/* 📜 右側獨立時間軸選單 */
+#timeline-sidebar {
+  position: absolute;
+  left: 680px;      
+  top: 0;
+  width: 280px;
+  height: 360px;    
+  background: #222;
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto; 
+  text-align: left;
+}
+
+/* 側欄標題區 */
+#sidebar-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--main-color); 
+  margin-bottom: 5px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+#timeline-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 📜 美化側欄滾動條 */
+#timeline-sidebar::-webkit-scrollbar { width: 6px; }
+#timeline-sidebar::-webkit-scrollbar-track { background: #222; }
+#timeline-sidebar::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
+#timeline-sidebar::-webkit-scrollbar-thumb:hover { background: var(--main-color); }
+
+/* 📱 RWD 行動裝置自動適應 */
+@media (max-width: 1024px) {
+  #main-layout { max-width: min(95vw, 640px); }
+  #timeline-sidebar {
+    position: static; 
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="title">261031 Show！音樂中心 MC 相沅 LEO & 沅禧</div>
+
+<div id="subtitle-controls">
+  <button class="btn" onclick="adjustSubtitle(4)">放大</button>
+  <button class="btn" onclick="adjustSubtitle(-4)">縮小</button>
+  <button class="btn" onclick="resetSubtitle()">復原</button>
+</div>
+
+<div id="main-layout">
+  
+  <div id="video-wrapper">
+    <div id="video-container">
+      <div id="player"></div>
+      <div id="subtitle"></div>
+      <button id="exitFullscreenBtn" class="btn" onclick="exitFullScreen()">退出全螢幕</button>
+    </div>
+    
+    <div id="bottom-block">
+      <button id="fullscreenBtn" class="btn" onclick="enterFullScreen()">全螢幕</button>
+    </div>
+  </div>
+
+  <div id="timeline-sidebar">
+    <div id="sidebar-title">時間軸目錄</div>
+    <div id="timeline-controls"></div>
+  </div>
+
+</div>
+
+<script>
+let player = null;
+const defaultFontSize = 24; 
+let currentFontSize = defaultFontSize;
+
+// 載入 YouTube API
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("player", {
+    height: "360",
+    width: "640",
+    videoId: videoId,
+    playerVars: { 
+      'autoplay': 0, 
+      'controls': 1, 
+      'rel': 0, 
+      'modestbranding': 1, 
+      'origin': window.location.origin,
+      'fs': 0 
+    },
+    events: { 
+      'onReady': onPlayerReady 
+    }
+  });
+}
+function onPlayerReady(event) { 
+  initTimelineButtons();
+  initGithubFavicon(); 
+  resetSubtitle();
+  // 💡 建議：調整為 40ms，字幕偵測更順暢
+  setInterval(videoLoop, 40); 
+}
+
+function videoLoop() {
+  if (!player || typeof player.getCurrentTime !== 'function') return;
+  const currentTime = player.getCurrentTime();
+  updateSubtitle(currentTime);
+}
+// 🌐 核心功能：動態綁定 GitHub 頭像至 Favicon
+function initGithubFavicon() {
+  if (!githubUsername || githubUsername === "填入你的GitHub帳號") return;
+  
+  const githubAvatarUrl = `https://github.com/${githubUsername}.png`;
+  const faviconEl = document.getElementById("custom-favicon");
+  if (faviconEl) {
+    faviconEl.href = githubAvatarUrl;
+  }
+}
+
+// 更新字幕
+function updateSubtitle(t){
+  if (!subtitles || subtitles.length === 0) return;
+  let text = "";
+  for(let i = subtitles.length - 1; i >= 0; i--){
+    const sub = subtitles[i];
+    if(t >= sub.time){
+      if(sub.endTime && t >= sub.endTime) { text = ""; } 
+      else { text = sub.text; }
+      break; 
+    }
+  }
+  const subEl = document.getElementById("subtitle");
+  if(text === "") { subEl.style.display = "none"; } 
+  else { subEl.style.display = "block"; subEl.innerText = text; }
+}
+
+// 點擊跳轉時間
+function jumpToTime(seconds) {
+  if (player && typeof player.seekTo === 'function') {
+    player.seekTo(seconds, true);
+    if (player.getPlayerState() !== 1) player.playVideo();
+  }
+}
+
+// 生成右側時間軸按鈕
+function initTimelineButtons() {
+  const container = document.getElementById("timeline-controls");
+  if (!container || !timeLinks || timeLinks.length === 0) return;
+  container.innerHTML = "";
+  timeLinks.forEach(link => {
+    const btn = document.createElement("button");
+    btn.innerText = link.label;
+    btn.style.cssText = "background: #333; color: white; border: 1px solid #444; padding: 12px 15px; border-radius: 6px; cursor: pointer; transition: 0.3s; font-weight: bold; font-size: 14px; width: 100%; text-align: left;";
+    btn.onmouseover = () => { btn.style.background = "var(--main-color)"; btn.style.borderColor = "var(--main-color)"; };
+    btn.onmouseout = () => { btn.style.background = "#333"; btn.style.borderColor = "#444"; };
+    btn.onclick = () => jumpToTime(link.seconds);
+    container.appendChild(btn);
+  });
+}
+
+// 字幕放大縮小功能
+function adjustSubtitle(value) {
+  const subEl = document.getElementById("subtitle");
+  currentFontSize += value;
+  if (currentFontSize < 12) currentFontSize = 12; 
+  if (currentFontSize > 60) currentFontSize = 60; 
+  subEl.style.fontSize = currentFontSize + "px";
+}
+
+// 字幕復原功能
+function resetSubtitle() {
+  const subEl = document.getElementById("subtitle");
+  currentFontSize = defaultFontSize;
+  subEl.style.fontSize = currentFontSize + "px";
+}
+
+// 進入全螢幕
+function enterFullScreen() {
+  const elem = document.getElementById("video-container");
+  let req = elem.requestFullscreen || elem.webkitRequestFullscreen;
+  if (req) req.call(elem);
+}
+
+// 離開全螢幕
+function exitFullScreen() {
+  let exit = document.exitFullscreen || document.webkitExitFullscreen;
+  if (exit) exit.call(document);
+}
+</script>
+</body>
+</html>
